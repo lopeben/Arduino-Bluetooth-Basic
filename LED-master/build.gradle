@@ -2,10 +2,17 @@
 
 buildscript {
     repositories {
+        google()  //--> moved here. fixed by: ikemura23 (https://qiita.com/ikemura23/items/ad9d4fec0d9bdc27ae99)
+                  // https://stackoverflow.com/questions/46972122/could-not-find-com-android-tools-lintlint-gradle-android-studio-3
         jcenter()
+        //google() //--> original position causes lint error: Could not find lint-gradle-api.jar (com.android.tools.lint:lint-gradle-api:26.1.2).
+                   // Android Studio 3.1.2 (my Android studio version)
+                   // Project Gradle Plugin:3.1.2
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        //classpath 'com.google.gms:google-services:3.2.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -14,6 +21,8 @@ buildscript {
 
 allprojects {
     repositories {
+        //google()
         jcenter()
+
     }
 }

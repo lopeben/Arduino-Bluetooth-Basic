@@ -134,7 +134,7 @@ public class ledControl extends ActionBarActivity {
 
     public  void about(View v)
     {
-        if(v.getId() == R.id.abt)
+        if(v.getId() == R.id.abt_btn)
         {
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);
